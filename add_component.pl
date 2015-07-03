@@ -1,4 +1,13 @@
-#!/usr/bin/perl -w
+#!/usr/bin/env perl -w
+
+# Add component to Bugzilla
+
+# Authors:
+# Michael Huang
+# Christopher Markieta
+
+# Credits: MR
+# http://random-dev.blogspot.ca/2011/12/adding-bugzilla-products-and-components.html
 
 use strict;
 use lib qw(. lib);
