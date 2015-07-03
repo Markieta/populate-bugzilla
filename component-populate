@@ -1,12 +1,23 @@
-#!/bin/bash
-#
-#Script to populate bugzilla components
-#
-#Michael Huang June 30 2015
+#!/usr/bin/env bash -e
 
-echo "Attempting to populate bugzilla with components"
+# Script to populate bugzilla components
 
-while read line; do first=$(echo $line | cut -f1 -d!); second=$(echo $line | cut -f2 -d!); ./add_component.pl $first $second; done < sumlist.txt
+# Authors:
+# Michael Huang,        June 30 2015
+# Christopher Markieta, July  3 2015
 
-echo "Finished populating"
+MY_DIR=$(dirname $0)
+
+if [ $(id -u) -ne 0 ]; then
+    echo "Root privileges are required for running $0."
+    exit 1
+fi
+
+while read line
+do
+     first=$(echo $line | cut -f1 -d!)
+    second=$(echo $line | cut -f2 -d!)
+
+    "$MY_DIR"/add_component.pl "$first" "$second"
+done < "$MY_DIR"/sumlist.txt
 
