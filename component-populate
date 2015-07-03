@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+#Script to populate bugzilla components
+#
+#Michael Huang June 30 2015
+
+echo "Attempting to populate bugzilla with components"
+
+while read line; do first=$(echo $line | cut -f1 -d!); second=$(echo $line | cut -f2 -d!); ./add_component.pl $first $second; done < sumlist.txt
+
+echo "Finished populating"
+
