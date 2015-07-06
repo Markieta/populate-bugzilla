@@ -3,8 +3,8 @@
 # Add component to Bugzilla
 
 # Authors:
-# Michael Huang
-# Christopher Markieta
+# Michael Huang,        June 30 2015
+# Christopher Markieta, July  3 2015
 
 # Credits: MR
 # http://random-dev.blogspot.ca/2011/12/adding-bugzilla-products-and-components.html
