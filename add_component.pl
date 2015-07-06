@@ -45,7 +45,7 @@ my $user = new Bugzilla::User({ name => $login })
 Bugzilla->set_user($user);
 
 #Get product
-my $product_name = 'LEAP';
+my $product_name = 'TestProduct';
 my $product = new Bugzilla::Product({ name => $product_name });
 
 #Create component
