@@ -24,7 +24,7 @@ exit 1;
 }
 
 #email of bugzilla account that has admin priviledges
-my $login = 'hong.huang@senecacollege.ca';
+my $login = 'markietachristopher@gmail.com';
 
 my $component_name = $ARGV[0];
 my $component_description = "";
@@ -53,6 +53,6 @@ my $component = Bugzilla::Component->create({
   name => $component_name,
   product => $product,
   description => $component_description,
-  initialowner => 'hong.huang@senecacollege.ca'
+  initialowner => $login
 });
 
